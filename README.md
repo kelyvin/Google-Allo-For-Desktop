@@ -1,6 +1,8 @@
 # Google Allo Desktop Webapps
 Nativefier desktop webapps for Google Allo. Google Allo requires supported by electron version `^1.7.6`.
 
+Both the mac and windows apps can be downloaded from the [latest release](https://github.com/kelyvin/Google-Allo-Desktop-App/releases).
+
 ## Purpose
 The purpose of this project is to build dedicated desktop apps for Google Allo and leverage your OS's built in notification system.
 
