@@ -1,5 +1,8 @@
-# Google Allo Desktop Webapps
-Nativefier desktop webapps for Google Allo. Google Allo is suppored by both [Nativefier](https://github.com/jiahaog/nativefier) and [Electron](https://github.com/electron/electron) version `^1.7.6`.
+# Google Allo for Desktop
+
+![Allo Home Page](http://i.imgur.com/5g1VU3S.png)
+
+A native desktop app for Google Allo. This desktop app Allo is supported by both [Nativefier](https://github.com/jiahaog/nativefier) and [Electron](https://github.com/electron/electron) version `^1.7.6`.
 
 Both the mac and windows apps can be downloaded from the [latest release](https://github.com/kelyvin/Google-Allo-Desktop-App/releases).
 
