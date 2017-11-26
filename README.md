@@ -28,10 +28,10 @@ nativefier --platform "mac" --icon allo-logo.png --name "Google Allo" "https://a
 
 ### Windows
 ```
-nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --electron-version 1.7.6
+nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --tray
 ```
 
 ### Linux
 ```
-nativefier --platform "linux" --icon allo-logo.png --name "GoogleAllo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --electron-version 1.7.6
+nativefier --platform "linux" --icon allo-logo.png --name "GoogleAllo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --tray
 ```
