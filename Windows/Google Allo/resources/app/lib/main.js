@@ -656,10 +656,6 @@ function debugLog(browserWindow, message) {
   console.log(message);
 }
 
-function getAppIcon() {
-  return _path2.default.join(__dirname, '../', `/icon.${isWindows() ? 'ico' : 'png'}`);
-}
-
 exports.default = {
   isOSX,
   isLinux,
@@ -667,8 +663,7 @@ exports.default = {
   linkIsInternal,
   getCssToInject,
   debugLog,
-  shouldInjectCss,
-  getAppIcon
+  shouldInjectCss
 };
 
 /***/ }),
@@ -1561,11 +1556,7 @@ if (appArgs.singleInstance) {
   var shouldQuit = _electron.app.makeSingleInstance(function () {
     // Someone tried to run a second instance, we should focus our window.
     if (mainWindow) {
-      if (!mainWindow.isVisible()) {
-        // tray
-        mainWindow.show();
-      }if (mainWindow.isMinimized()) {
-        // minimized
+      if (mainWindow.isMinimized()) {
         mainWindow.restore();
       }
       mainWindow.focus();
@@ -4606,8 +4597,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var isOSX = _helpers2.default.isOSX,
     linkIsInternal = _helpers2.default.linkIsInternal,
     getCssToInject = _helpers2.default.getCssToInject,
-    shouldInjectCss = _helpers2.default.shouldInjectCss,
-    getAppIcon = _helpers2.default.getAppIcon;
+    shouldInjectCss = _helpers2.default.shouldInjectCss;
 
 
 var ZOOM_INTERVAL = 0.1;
@@ -4687,7 +4677,7 @@ function createMainWindow(inpOptions, onAppQuit, setDockBadge) {
       zoomFactor: options.zoom
     },
     // after webpack path here should reference `resources/app/`
-    icon: getAppIcon(),
+    icon: _path2.default.join(__dirname, '../', '/icon.png'),
     // set to undefined and not false because explicitly setting to false will disable full screen
     fullscreen: options.fullScreen || undefined
   });
@@ -6665,20 +6655,13 @@ var _path = __webpack_require__(0);
 
 var _path2 = _interopRequireDefault(_path);
 
-var _helpers = __webpack_require__(4);
-
-var _helpers2 = _interopRequireDefault(_helpers);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _require = __webpack_require__(2),
     app = _require.app,
     Tray = _require.Tray,
     Menu = _require.Menu,
-    ipcMain = _require.ipcMain,
-    nativeImage = _require.nativeImage;
-
-var getAppIcon = _helpers2.default.getAppIcon;
+    ipcMain = _require.ipcMain;
 
 /**
  *
@@ -6687,13 +6670,13 @@ var getAppIcon = _helpers2.default.getAppIcon;
  * @returns {electron.Tray}
  */
 
+
 function createTrayIcon(inpOptions, mainWindow) {
   var options = Object.assign({}, inpOptions);
 
   if (options.tray) {
-    var iconPath = getAppIcon();
-    var nimage = nativeImage.createFromPath(iconPath);
-    var appIcon = new Tray(nimage);
+    var iconPath = _path2.default.join(__dirname, '../', '/icon.png');
+    var appIcon = new Tray(iconPath);
 
     var onClick = function onClick() {
       if (mainWindow.isVisible()) {
