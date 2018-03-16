@@ -28,7 +28,7 @@ nativefier --platform "mac" --icon allo-logo.png --name "Google Allo" "https://a
 
 ### Windows
 ```
-nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --tray --electron-version 1.7.13
+nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --electron-version 1.7.13
 ```
 
 ### Linux
