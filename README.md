@@ -23,15 +23,15 @@ npm install -g nativefier
 
 ### Mac
 ```
-nativefier --platform "mac" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --electron-version 1.7.13
+nativefier --platform "mac" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --inject dark-theme.css --honest --disable-dev-tools --single-instance
 ```
 
 ### Windows
 ```
-nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --electron-version 1.7.13
+nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --inject dark-theme.css --honest --disable-dev-tools --single-instance --tray
 ```
 
 ### Linux
 ```
-nativefier --platform "linux" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --honest --disable-dev-tools --single-instance --electron-version 1.7.13
+nativefier --platform "linux" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --inject dark-theme.css --honest --disable-dev-tools --single-instance
 ```
