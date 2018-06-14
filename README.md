@@ -4,7 +4,7 @@
 
 A desktop app for [Google Allo](https://www.allofordesktop.com/). This desktop app is supported by both [Nativefier](https://github.com/jiahaog/nativefier) and [Electron](https://github.com/electron/electron) version `^1.7.6`.
 
-The Mac, Windows, and Linux apps can be downloaded from the [latest release](https://github.com/kelyvin/Google-Allo-Desktop-App/releases).
+The Mac, Windows, and Linux apps can be downloaded from the [latest release](https://github.com/kelyvin/Google-Allo-Desktop-App/releases). The latest release includes both a light and dark theme version of the app.
 
 ## Purpose
 The purpose of this project is to build dedicated desktop apps for Google Allo and leverage your OS's built in notification system.
