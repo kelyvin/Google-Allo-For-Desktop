@@ -12,9 +12,6 @@ The purpose of this project is to build dedicated desktop apps for Google Allo a
 This desktop app and project is not an official product of Google and I am not affiliated with Google in any way. You can read more about the purpose of this project here:
 https://www.caffeinecoding.com/validating-a-customer-need-with-rapid-experimentation/
 
-## Notifications on Windows
-To receive notifications on Windows, you'll need you'll need to add a shortcut to the Start Menu folder for this app.
-
 ## Rebuilding the app
 Requires `nodejs`
 
@@ -37,4 +34,21 @@ nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https
 ### Linux
 ```
 nativefier --platform "linux" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --inject dark-theme.css --honest --disable-dev-tools --single-instance
+```
+
+## Notifications on Windows
+To receive notifications on Windows, you'll need you'll need to add a shortcut to the Start Menu folder for this app.
+
+This is done by setting `app.setAppUserModelId(process.execPath)` within `resources/app/lib/main.js` during electron initialization:
+
+Example:
+
+```javascript
+const {app, shell} = electron;
+
+app.setAppUserModelId(process.execPath);  // Include this line
+
+function getFilenameFromMime(name, mime) {
+  const exts = extName.mime(mime);
+  ...
 ```
