@@ -36,10 +36,16 @@ nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https
 nativefier --platform "linux" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --inject dark-theme.css --honest --disable-dev-tools --single-instance
 ```
 
-## Notifications on Windows
-To receive notifications on Windows, you'll need you'll need to add a shortcut to the Start Menu folder for this app.
 
-This is done by setting `app.setAppUserModelId(process.execPath)` within `resources/app/lib/main.js` during electron initialization:
+## Notifications on Windows
+To receive notifications on Windows, you'll need to do the following: 
+
+1. Add a shortcut of this app to the Start Menu folder
+2. In the "Windows Settings" app, check if the setting for "Show notifications in action center" is on (It might be off by default)
+
+
+### For developers
+These instructions were the result of an active issue with electron + Windows 8/10 and is resolved by setting `app.setAppUserModelId(process.execPath)` within `resources/app/lib/main.js` during electron initialization:
 
 Example:
 
@@ -52,3 +58,4 @@ function getFilenameFromMime(name, mime) {
   const exts = extName.mime(mime);
   ...
 ```
+
