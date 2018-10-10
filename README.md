@@ -28,7 +28,7 @@ nativefier --platform "mac" --icon allo-logo.png --name "Google Allo" "https://a
 
 ### Windows
 ```
-nativefier --platform "windows" --icon allo-logo.png --name "Google Allo" "https://allo.google.com/web" --inject dark-theme.css --honest --disable-dev-tools --single-instance --tray
+nativefier --platform "windows" --icon allo-logo.ico --name "Google Allo" "https://allo.google.com/web" --inject dark-theme.css --honest --disable-dev-tools --single-instance --tray
 ```
 
 ### Linux
