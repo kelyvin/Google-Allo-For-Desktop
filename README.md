@@ -1,3 +1,6 @@
+# DEPRECATED
+### With Google's latest announcement that allo is [shutting down in March](https://www.cnet.com/g00/news/google-allo-to-shut-down-in-march-of-2019/?i10c.ua=1&i10c.encReferrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%3d&i10c.dv=11), this project will also be ending and moving to "archive" mode. I would like to thank everyone for the downloads and support and for helping to validate a user need. You can check out the [Android Messages for Desktop](https://github.com/kelyvin/Android-Messages-For-Desktop) project instead. 
+
 # Google Allo for Desktop
 
 ![Allo Home Page](http://i.imgur.com/5g1VU3S.png)
